@@ -4,7 +4,7 @@ import { Like } from 'typeorm';
 import MyDataSource from '../../database/index'
 import { Request, Response } from 'express';
 
-const getUser: RequestHandler = async (req: Request, res: Response) => {
+const getUser: RequestHandler = async (req: Request, res: Response): Promise<any> => {
     const searchQuery = req.query.q as string | undefined;
     let whereCondition = {};
     if (searchQuery) {

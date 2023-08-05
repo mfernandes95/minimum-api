@@ -6,7 +6,7 @@ import { resolve } from 'path';
 import MyDataSource from '../../database/index'
 import { Request, Response } from 'express';
 
-const uploadFile : RequestHandler = async (req: Request, res: Response) => {
+const uploadFile : RequestHandler = async (req: Request, res: Response): Promise<void> => {
 
   const file = req.file;
   if (!file) {
