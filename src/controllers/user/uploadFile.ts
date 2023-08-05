@@ -4,8 +4,9 @@ import fs from 'fs'
 import { parse } from 'csv-parse'
 import { resolve } from 'path';
 import MyDataSource from '../../database/index'
+import { Request, Response } from 'express';
 
-const uploadFile : RequestHandler = async (req, res) => {
+const uploadFile : RequestHandler = async (req: Request, res: Response) => {
 
   const file = req.file;
   if (!file) {

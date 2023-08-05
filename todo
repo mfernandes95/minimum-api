@@ -17,6 +17,7 @@
 [] Error handler
   [] Erro 400 criar handler
 
+[] remover as tipagens any
 
 [] remover comentarios
 [] lint/identaçaõ

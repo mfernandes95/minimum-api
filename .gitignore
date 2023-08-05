@@ -1,4 +1,5 @@
 uploads/*
+database.sqlite
 
 # build directory
 dist

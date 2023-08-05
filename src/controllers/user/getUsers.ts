@@ -2,9 +2,9 @@ import { RequestHandler } from 'express'
 import UserEntity from '../../database/entities/user.entity'
 import { Like } from 'typeorm';
 import MyDataSource from '../../database/index'
+import { Request, Response } from 'express';
 
-const getUser: RequestHandler = async (req, res) => {
-    
+const getUser: RequestHandler = async (req: Request, res: Response) => {
     const searchQuery = req.query.q as string | undefined;
     let whereCondition = {};
     if (searchQuery) {
@@ -20,7 +20,7 @@ const getUser: RequestHandler = async (req, res) => {
     const users = await userRepository.find({
         where: whereCondition,
       })
-    res.status(200).json(users);
+    res.status(200).send(users);
 }
 
 export default getUser
