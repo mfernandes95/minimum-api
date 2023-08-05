@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn  } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'users' })
 class UserEntity {
@@ -18,4 +18,4 @@ class UserEntity {
   favorite_sport: string;
 }
 
-export default UserEntity
+export default UserEntity;
