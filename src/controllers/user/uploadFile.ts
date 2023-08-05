@@ -1,9 +1,9 @@
 import { RequestHandler } from 'express'
 import UserEntity from '../../database/entities/user.entity'
-import { getRepository } from 'typeorm/globals'
 import fs from 'fs'
 import { parse } from 'csv-parse'
 import { resolve } from 'path';
+import MyDataSource from '../../database/index'
 
 const uploadFile : RequestHandler = async (req, res) => {
 
@@ -28,8 +28,10 @@ const uploadFile : RequestHandler = async (req, res) => {
                     name, city, country, favorite_sport
                 }
 
-                const user = getRepository(UserEntity).create(data)
-                await getRepository(UserEntity).save(user)
+                const userRepository = MyDataSource.getRepository(UserEntity)
+
+                const user = userRepository.create(data)
+                await userRepository.save(user)
 
             }
         })

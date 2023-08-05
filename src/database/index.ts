@@ -4,8 +4,9 @@ import UserEntity from "./entities/user.entity"
 
 const myDataSource = new DataSource({
     type: "sqlite",
-    database: "test",
+    database: "../database/database.sqlite",
     entities: [UserEntity],
+    synchronize: true,
 })
 
 myDataSource.initialize()
