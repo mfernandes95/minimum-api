@@ -1,0 +1,22 @@
+[X] configurar DB
+  [X] typeorm
+  [X] sqlite
+
+[X] Input do csv
+
+[X] Save users on DB
+
+[X] excluit libs inuteis
+    [X] csv parser
+    [X] colocar libs no modo desenvolvimento
+
+[X] Filtro
+
+[] Testes uitários e de integração
+
+[] Error handler
+  [] Erro 400 criar handler
+
+
+[] remover comentarios
+[] lint/identaçaõ
