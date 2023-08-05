@@ -6,7 +6,7 @@ import config from './config';
 import './database/index'
 import errorHandler from './middleware/errorHandler';
 import fourOhFour from './middleware/fourOhFour';
-import user from './routes/user';
+import route from './routes/user';
 
 const app = express()
 
@@ -19,7 +19,7 @@ app.use(cors({
 app.use(helmet())
 app.use(morgan('tiny'))
 
-app.use('/', user)
+app.use('/', route)
 
 app.use(fourOhFour)
 app.use(errorHandler)

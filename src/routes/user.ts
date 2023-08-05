@@ -7,9 +7,9 @@ import getUsers from '../controllers/user/getUsers'
 import uploadFile from '../controllers/user/uploadFile'
 
 const upload = multer(storage);
-const user = express.Router()
+const route = express.Router()
 
-user.get('/api/users', getUsers)
-user.post('/api/files', upload.single('csvFile'), uploadFile)
+route.get('/api/users', getUsers)
+route.post('/api/files', upload.single('csvFile'), uploadFile)
 
-export default user
+export default route
