@@ -1,12 +1,10 @@
-# Node Express & Typescript Starter for 2022 & 2023
-
-_"A minimally opinionated typescript & express starter for 2022 & 2023"_
-
-This template is also used by my utility create-my-express on npm.
+# shaw-api
 
 ## Usage:
 
-You should copy `.env.sample` to `.env` and then:
+You should:
+
+`npm i` - Run package install.
 
 `npm run dev` - Run the development server.
 
@@ -20,10 +18,7 @@ You should copy `.env.sample` to `.env` and then:
 
 ## Default endpoints:
 
-A `GET` request to `/` will respond with a description of the application.
+A `GET` request to `/api/files` you can import one file.csv and save data in database.
 
-A `POST` request to `/` will echo any json sent in the request body.
+A `POST` request to `/api/users` will respond with all users.
 
-## Help out
-
-Feedback and contributions are very welcome.
